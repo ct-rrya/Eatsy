@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Eatsy - Food Budget Assistant</title>
+    <link rel="stylesheet" href="~/Content/Styles/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav_bar">
+        <div class="logo_nav">
+            <img src="~/Content/SVG/Mockup_Logo.svg" alt="LOGO">
+        </div>
+        <div class="options">
+            <a href="@Url.Action("Index", "Home")#hero-section">HOME</a>
+            <a href="@Url.Action("Index", "Home")#budget-section">SEARCH</a>
+            <a href="@Url.Action("Index", "Home")#restaurants-section">RESTAURANTS</a>
+            <a href="@Url.Action("About", "Home")">ABOUT US</a>
+        </div>
+    </nav>
+
+    @RenderBody()
+    
+    <div class="background-overlay"></div>
+    
+    <script src="~/Scripts/script.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

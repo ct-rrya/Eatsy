@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Section 1: first -->
+<section id="hero-section" class="hero-section">
+    <div class="home_info_container">
+        <header class="title_container">
+            <div class="title">
+                <h1>EATSY</h1>
+                <h2 class="loop">FOOD ASSISTANT</h2>
+                <button class="svg_button" onclick="scrollToBudget()">
+                    <img src="~/Content/SVG/burger-icon.svg" alt="Info Icon" class="burger_icon">
+                </button>
+            </div>
+        </header>
+
+        <div class="P_container">
+            <div class="paragraph_container">
+                <p>
+                    Welcome to our humble abode, where you can satisfy your cravings without spending too much.
+                    Our menu offers a variety of tasty options that are easy to explore, helping you decide what you want without the hassle.
+                    Whether you're looking for a full meal, a quick snack, or a refreshing drink, we've got you covered. Plus,
+                    it's all conveniently available near the CTU Daanbantayan Campus — perfect for students and visitors alike.
+                    Enjoy great food at affordable prices, all in one place!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: for searching -->
+<section id="budget-section" class="budget-section">
+    <h2 class="section-title">Find Food Within Your Budget</h2>
+
+    <div class="input-bar-container">
+        <div class="input-bar">
+            <input type="number" id="budget-input" placeholder="Enter your budget" />
+            <button id="search-button">Search</button>
+            <button id="reset-button">Show All</button>
+        </div>
+    </div>
+
+    <div class="results-container">
+        <div class="food-results" id="food-container">
+            <!-- Food items dynamically generated here -->
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: resto slider not accomplished -->
+<section id="restaurants-section" class="restaurants-section">
+    <h2 class="section-title">Explore Local Shit</h2>
+
+    <div class="restaurant-slider">
+        <div class="restaurant-cards" id="restaurant-container">
+            <!-- Restaurant cards will be dynamically generated here -->
+        </div>
+    </div>
+</section>

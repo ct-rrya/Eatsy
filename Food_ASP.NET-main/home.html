@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="nav_bar">
+        <div class="login_nav">
+            <a href="#" >LOGIN</a>
+        </div>
+        <div class="logo_nav">
+            <img src="SVG/Mockup_Logo.svg" alt="LOGO">
+        </div>
+        <div class="options">
+            <!-- Add navigation links here -->
+            <a href="#">HOME</a>
+            <a href="#">BUDGET</a>
+            <a href="#">ABOUT US</a>
+        </div>
+       
+    </div>
+
+    <div class ="home_info_container">
+        <header class="title_container">
+
+            <div class = "title">
+                <h1>EATSY</h1>
+                <h2 class="loop"> FOOD ASSISTANT</h2>
+                <button class="svg_button">
+                    <img src="SVG/burger-icon.svg" alt="Info Icon" class="burger_icon"> 
+                </button>
+            </div>
+        </header>
+
+        <div class = "P_container">
+        
+            <div class="paragraph_container">
+                <p>Welcome to our humble abode, where you can satisfy your cravings without spending too much. 
+                Our menu offers a variety of tasty options that are easy to explore, helping you decide what you want without the hassle.
+                Whether you're looking for a full meal, a quick snack, or a refreshing drink, we've got you covered. Plus,
+                it's all conveniently available near the CTU Daanbantayan Campus — perfect for students and visitors alike. 
+                Enjoy great food at affordable prices, all in one place!
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Add this to your HTML -->
+<section class="budget-container">
+    <h2 class="budget-heading">BUDGET SECTION</h2>
+    
+    <div class="search-container" style="display: none;">
+        <input type="number" class="search-bar" placeholder="Enter max budget (₱)">
+        <button type="button" class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                <path d="M21.71 20.29l-5.4-5.4a8 8 0 1 0-1.42 1.42l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="restaurant-cards-gallery" id="restaurant-container">
+        <!-- Restaurant cards will be populated here -->
+    </div>
+
+    <div class="slider-nav">
+        <button class="slider-button" id="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button class="slider-button" id="next-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="menu-container" id="menu-container">
+        <h3 class="menu-heading">Menu Items</h3>
+        <div class="menu-items" id="menu-items-container">
+            <!-- Menu items will be populated here -->
+        </div>
+    </div>
+</section>
+
+    
+    <div class="background-overlay"></div>
+
+    
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3 class = "CTU-footer">
+                In Partnership with Cebu Technological University  - Daanbantayan™ 
+            </h3>
+        </div>
+    </div>
+
+</footer>
+    
+<script src="script.js"></script>
+</body>
+
+</html>

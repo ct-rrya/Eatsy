@@ -27,7 +27,19 @@ namespace ASP.Net_project.Controllers
             return View();
         }
 
+
+        //For testing
         public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
         {
             return View();
         }

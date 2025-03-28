@@ -8,7 +8,7 @@
                     <div class="login-form-container mt-5">
                         <h2 class="text-center mb-4 bebas-neue">Login</h2>
 
-                        @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "form" }))
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form" }))
                         {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })

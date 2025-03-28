@@ -49,7 +49,7 @@ namespace ASP.Net_project.Controllers
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction("Admin", "Account");
                         }
                     }
                 }
@@ -69,5 +69,52 @@ namespace ASP.Net_project.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Check if email already exists
+                if (_db.Users.Any(u => u.email == model.Email))
+                {
+                    ModelState.AddModelError("", "Email is already taken.");
+                    return View(model);
+                }
+
+                // Hash the password
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password);
+
+                // Create new user object and save it
+                var user = new User
+                {
+                    email = model.Email,
+                    password_hash = hashedPassword
+                };
+
+                _db.Users.Add(user);
+                _db.SaveChanges();
+
+                // Redirect to login page
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View(model);
+        }
+
+
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
     }
+
+   
 }

@@ -1,0 +1,39 @@
+﻿<main>
+    @model ASP.Net_project.Models.LoginViewModel
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-form-container mt-5">
+                        <h2 class="text-center mb-4 bebas-neue">Login</h2>
+
+                        @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.Email, new { @class = "form-label bondarians" })
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.Password, new { @class = "form-label bondarians" })
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary bondarians">Login</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</main>

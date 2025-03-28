@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Tasty Treats",
+    "image": "images/restaurant1.jpg",
+    "distance": "1.2 km",
+    "tags": [ "Fast Food", "Budget-friendly", "Takeout" ],
+    "menu": [
+      {
+        "name": "Burger",
+        "price": 45,
+        "image": "images/burger.jpg",
+        "description": "Juicy beef patty with fresh veggies"
+      },
+      {
+        "name": "Fries",
+        "price": 25,
+        "image": "images/fries.jpg",
+        "description": "Crispy golden fries"
+      },
+      {
+        "name": "Soda",
+        "price": 20,
+        "image": "images/soda.jpg",
+        "description": "Refreshing cold drink"
+      },
+      {
+        "name": "Chicken Meal",
+        "price": 65,
+        "image": "images/chicken.jpg",
+        "description": "Crispy fried chicken with rice"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Cafe Delight",
+    "image": "images/restaurant2.jpg",
+    "distance": "0.8 km",
+    "tags": [ "Cafe", "Breakfast", "Coffee" ],
+    "menu": [
+      {
+        "name": "Coffee",
+        "price": 35,
+        "image": "images/coffee.jpg",
+        "description": "Freshly brewed coffee"
+      },
+      {
+        "name": "Sandwich",
+        "price": 40,
+        "image": "images/sandwich.jpg",
+        "description": "Ham and cheese sandwich"
+      },
+      {
+        "name": "Pancakes",
+        "price": 55,
+        "image": "images/pancakes.jpg",
+        "description": "Fluffy pancakes with syrup"
+      },
+      {
+        "name": "Croissant",
+        "price": 30,
+        "image": "images/croissant.jpg",
+        "description": "Buttery flaky croissant"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pizza Paradise",
+    "image": "images/restaurant3.jpg",
+    "distance": "2.5 km",
+    "tags": [ "Pizza", "Italian", "Delivery" ],
+    "menu": [
+      {
+        "name": "Margherita Slice",
+        "price": 50,
+        "image": "images/pizza1.jpg",
+        "description": "Classic cheese and tomato"
+      },
+      {
+        "name": "Pepperoni Slice",
+        "price": 60,
+        "image": "images/pizza2.jpg",
+        "description": "Spicy pepperoni pizza"
+      },
+      {
+        "name": "Garlic Bread",
+        "price": 35,
+        "image": "images/garlic.jpg",
+        "description": "Toasted bread with garlic butter"
+      },
+      {
+        "name": "Pasta",
+        "price": 70,
+        "image": "images/pasta.jpg",
+        "description": "Tomato pasta with herbs"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Street Food Corner",
+    "image": "images/restaurant4.jpg",
+    "distance": "0.5 km",
+    "tags": [ "Street Food", "Local", "Quick Bite" ],
+    "menu": [
+      {
+        "name": "Fishball",
+        "price": 15,
+        "image": "images/fishball.jpg",
+        "description": "Deep-fried fish balls with sauce"
+      },
+      {
+        "name": "Kwek Kwek",
+        "price": 20,
+        "image": "images/kwek.jpg",
+        "description": "Orange battered quail eggs"
+      },
+      {
+        "name": "Isaw",
+        "price": 10,
+        "image": "images/isaw.jpg",
+        "description": "Grilled chicken intestines"
+      },
+      {
+        "name": "Banana Cue",
+        "price": 15,
+        "image": "images/banana.jpg",
+        "description": "Caramelized banana on stick"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Bulingits ni Goper",
+    "image": "images/restaurant5.jpg",
+    "distance": "0.5 km",
+    "tags": [ "Street Food", "Local", "Quick Bite" ],
+    "menu": [
+      {
+        "name": "Fishball",
+        "price": 15,
+        "image": "images/fishball.jpg",
+        "description": "Deep-fried fish balls with sauce"
+      },
+      {
+        "name": "Kwek Kwek",
+        "price": 20,
+        "image": "images/kwek.jpg",
+        "description": "Orange battered quail eggs"
+      },
+      {
+        "name": "Isaw",
+        "price": 10,
+        "image": "images/isaw.jpg",
+        "description": "Grilled chicken intestines"
+      },
+      {
+        "name": "Banana Cue",
+        "price": 15,
+        "image": "images/banana.jpg",
+        "description": "Caramelized banana on stick"
+      }
+    ]
+  }
+]

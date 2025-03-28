@@ -2,9 +2,9 @@
 
 
 
-# Prerequisites for ASP.NET Project
+## Prerequisites for ASP.NET Project
 
-## Required Software
+### Required Software
 Before running this project on another computer, ensure the following software is installed:
 
 - **Visual Studio 2022** (or later)
@@ -13,7 +13,7 @@ Before running this project on another computer, ensure the following software i
 - **Node.js (for frontend dependencies, if needed)**
 - **Git** (optional, for version control)
 
-## Required NuGet Packages
+### Required NuGet Packages
 Make sure to install the following NuGet packages:
 
 ```plaintext

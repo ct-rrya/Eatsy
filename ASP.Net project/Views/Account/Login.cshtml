@@ -1,39 +1,63 @@
-﻿<main>
-    @model ASP.Net_project.Models.LoginViewModel
+﻿@model ASP.Net_project.Models.LoginViewModel
 
-    <main>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="login-form-container mt-5">
-                        <h2 class="text-center mb-4 bebas-neue">Login</h2>
+<main class="login-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-form-wrapper">
+                    <h2 class="login-title">Login</h2>
 
-                        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "validation-summary-errors" })
 
-                            <div class="mb-3">
-                                @Html.LabelFor(m => m.Email, new { @class = "form-label bondarians" })
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
-                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
 
-                            <div class="mb-3">
-                                @Html.LabelFor(m => m.Password, new { @class = "form-label bondarians" })
-                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
 
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary bondarians">Login</button>
-                            </div>
-                        }
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Login</button>
+
+                            <a href="@Url.Action("Register","Account")" class="btn btn-secondary">Register</a>
+                        </div>
+                    }
+
+                    <div class="text-center mt-3">
+                        <small class="text-muted">&copy; @DateTime.Now.Year Your Company Name</small>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
-
+    </div>
 </main>
+
+<script>
+    // Optional: Client-side validation
+    $(document).ready(function () {
+        $(".login-form").validate({
+            rules: {
+                Email: {
+                    required: true,
+                    email: true
+                },
+                Password: {
+                    required: true,
+                    minlength: 6
+                }
+            },
+            errorPlacement: function (error, element) {
+                error.addClass('text-danger small');
+                error.insertAfter(element);
+            }
+        });
+    });
+</script>
